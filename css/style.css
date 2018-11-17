@@ -1,3 +1,14 @@
+body {
+	background-color: rgba(43, 227, 227, 0.63);
+	background: @include filter-gradient(#2be3e3, #2be3e3, vertical);
+	// IE9 SVG, needs conditional override of 'filter' to 'none'
+	$experimental-support-for-svg: true;
+	background: @include background-image(linear-gradient(top, rgba(43, 227, 227, 0.63) 0%, rgba(43, 227, 227, 0.77) 14%, rgba(38, 179, 209, 1) 36%, rgba(23, 41, 155, 1) 100%));
+}
+.container .row {
+	margin-bottom: 26px;
+	box-shadow: 0px 10px 26px #888888;
+}
 .menu {
 	background-color: #fff;
 }
@@ -7,6 +18,8 @@
 .navbar {
 	min-height: 88px;
 	margin-bottom: 0px;
+	box-shadow: 5px 4px 30px #888888;
+	z-index: 1;
 }
 .menu-list {
 	margin-top: 1%;
@@ -29,11 +42,6 @@
 .navbar-default .navbar-nav>li>a.btn-login:hover {
 	background-color: #0546E9;
 }
-.banner img {
-	display: block;
-	width: 100%;
-	position: absolute;
-}
 .navbar-brand {
 	padding: 0px;
 }
@@ -44,7 +52,7 @@
 }
 .navbar-brand>img {
 	padding: 0px 6%;
-	margin-top: 5%;
+	margin-top: 9%;
 }
 .brand-centered .navbar-brand {
 	display: flex;
@@ -73,4 +81,136 @@
 }
 .navbar-nav>li>.dropdown-menu {
 	z-index: 9999;
+}
+.banner {
+	background: url(../image/Video.png), no-repeat;
+	width: 100%;
+	background-size: 100% 100%;
+}
+.title h1 {
+	font-size: 8em;
+	color: #fff;
+	padding-left: 30%;
+	padding-right: 30%;
+	padding-top: 6%;
+	margin-top: 0px;
+}
+.title p {
+	font-size: 3rem;
+	font-weight: bold;
+	color: #fff;
+	padding-left: 40%;
+	padding-right: 40%;
+	padding-bottom: 3%;
+	margin-bottom: 0px;
+}
+.main {
+	background: #fff;
+}
+.main h1 {
+	padding-top: 60px;
+}
+.luck-draw img {
+	padding-left: 40%;
+	padding-right: 40%;
+	padding-top: 5%;
+	padding-bottom: 3%;
+}
+.luck-draw img:hover {
+/*    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);*/
+}
+.pink-line {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-bottom: 5px solid #F9496F;
+}
+.social-group {
+	padding-top: 4%;
+	padding-bottom: 5%;
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+	.title h1 {
+		font-size: 6em;
+		padding-left: 29%;
+		padding-right: 29%;
+		padding-top: 4%;
+	}
+	.title p {
+		font-size: 1.7em;
+		padding-left: 37%;
+		padding-right: 37%;
+	}
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px) and (orientation: landscape) {
+	.title h1 {
+		font-size: 5em;
+		padding-left: 29%;
+		padding-right: 29%;
+		padding-top: 4%;
+	}
+	.title p {
+		font-size: 1.6em;
+		padding-left: 37%;
+		padding-right: 37%;
+	}
+}
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+	.title h1 {
+		font-size: 4.7em;
+		padding-left: 29%;
+		padding-right: 29%;
+		padding-top: 4%;
+	}
+	.title p {
+		font-size: 1.5em;
+		padding-left: 37%;
+		padding-right: 37%;
+	}
+}
+@media only screen and (max-width: 768px) and (min-width: 376px) and (orientation: landscape) {
+	.title h1 {
+		font-size: 3.7em;
+		padding-left: 29%;
+		padding-right: 29%;
+		padding-top: 4%;
+	}
+	.title p {
+		font-size: 1.6rem;
+		padding-left: 37%;
+		padding-right: 37%;
+	}
+}
+@media only screen and (max-width: 414px) and (min-width: 375px) {
+	.navbar-brand>img {
+		margin-top: 0%;
+	}
+	.title h1 {
+		font-size: 2.5em;
+		padding-left: 29%;
+		padding-right: 27%;
+		padding-top: 1%;
+	}
+	.title p {
+		font-size: 1rem;
+		padding-left: 37%;
+		padding-right: 37%;
+	}
+}
+@media only screen and (max-width: 362px) and (min-width: 320px) {
+	.navbar-brand>img {
+		margin-top: 0%;
+	}
+	.title h1 {
+		font-size: 2em;
+		padding-left: 29%;
+		padding-right: 27%;
+		padding-top: 1%;
+	}
+	.title p {
+		font-size: 0.9rem;
+		padding-left: 37%;
+		padding-right: 37%;
+	}
 }

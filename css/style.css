@@ -1,9 +1,12 @@
 body {
-	background-color: rgba(43, 227, 227, 0.63);
-	background: @include filter-gradient(#2be3e3, #2be3e3, vertical);
-	// IE9 SVG, needs conditional override of 'filter' to 'none'
-	$experimental-support-for-svg: true;
-	background: @include background-image(linear-gradient(top, rgba(43, 227, 227, 0.63) 0%, rgba(43, 227, 227, 0.77) 14%, rgba(38, 179, 209, 1) 36%, rgba(23, 41, 155, 1) 100%));
+	background: rgba(255, 255, 255, 1);
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 221, 0.97) 22%, rgba(7, 219, 201, 0.94) 49%, rgba(31, 0, 209, 0.88) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(22%, rgba(0, 255, 221, 0.97)), color-stop(49%, rgba(7, 219, 201, 0.94)), color-stop(100%, rgba(31, 0, 209, 0.88)));
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 221, 0.97) 22%, rgba(7, 219, 201, 0.94) 49%, rgba(31, 0, 209, 0.88) 100%);
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 221, 0.97) 22%, rgba(7, 219, 201, 0.94) 49%, rgba(31, 0, 209, 0.88) 100%);
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 221, 0.97) 22%, rgba(7, 219, 201, 0.94) 49%, rgba(31, 0, 209, 0.88) 100%);
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 221, 0.97) 22%, rgba(7, 219, 201, 0.94) 49%, rgba(31, 0, 209, 0.88) 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1f00d1', GradientType=0);
 }
 .container .row {
 	margin-bottom: 26px;
@@ -117,7 +120,7 @@ body {
 	padding-bottom: 3%;
 }
 .luck-draw img:hover {
-/*    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);*/
+	/*    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);*/
 }
 .pink-line {
 	padding-top: 3%;
@@ -128,8 +131,23 @@ body {
 	padding-top: 4%;
 	padding-bottom: 5%;
 }
+.section2 .main img {
+	padding-left: 12%;
+	padding-right: 12%;
+	padding-top: 5%;
+	padding-bottom: 3%;
+	width: 100%;
+}
+.section2 .main .detail {
+	padding-left: 13%;
+}
 
-
+.section2 .map iframe {
+	padding-top: 5%;
+	padding-left: 12%;
+	padding-right: 12%;
+	width: 100%;
+}
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
 	.title h1 {
 		font-size: 6em;
